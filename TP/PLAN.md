@@ -10,15 +10,15 @@ Knowing that the `PointSet` class is made so that the 4 first bytes of its binar
 
 **Basic functionality tests:**
 
-- [ ] Test the `Triangulator` class with a simple set of points and return how many points are in the set.
+- [x] Test the `Triangulator` class with a simple set of points and return how many points are in the set.
 
-- [ ] Test the `Triangulator` class with less than 3 points and ensure it handles this case correctly (e.g., returns an empty triangulation).
+- [x] Test the `Triangulator` class with less than 3 points and ensure it handles this case correctly (e.g., returns an empty triangulation).
 
 **Conversion tests:**
 
-- [ ] Test the `Triangulator` class making sure the conversion from `PointSet` to its binary representation is correct.
+- [x] Test the `Triangulator` class making sure the conversion from `PointSet` to its binary representation is correct.
 
-- [ ] Test the `Triangulator` class making sure the conversion from the binary representation back to a `PointSet` instance is correct.
+- [x] Test the `Triangulator` class making sure the conversion from the binary representation back to a `PointSet` instance is correct.
 
 **API tests:**
 
@@ -35,13 +35,13 @@ Knowing that the `PointSet` class is made so that the 4 first bytes of its binar
 
 **Advanced cases:**
 
-- [ ] Checks the 4 first bytes of the binary representation of a `PointSet` instance to verify it matches the expected number of points.
+- [x] Checks the 4 first bytes of the binary representation of a `PointSet` instance to verify it matches the expected number of points.
 
-- [ ] Test the `Triangulator` class with an empty set of points and ensure it handles this case correctly.
+- [x] Test the `Triangulator` class with an empty set of points and ensure it handles this case correctly.
 
-- [ ] Test the `Triangulator` class with a set of points that form a concave polygon and verify the triangulation result.
+- [x] Test the `Triangulator` class with a set of points that form a concave polygon and verify the triangulation result.
 
-- [ ] Test the `Triangulator` class with two conflicting points (same coordinates) and ensure it handles duplicates correctly.
+- [x] Test the `Triangulator` class with two conflicting points (same coordinates) and ensure it handles duplicates correctly.
 
 - [ ] Test the `Triangulator` class with various parameter types and values (e.g., passing `None`, strings, negative numbers, etc.) to ensure proper error handling.
 

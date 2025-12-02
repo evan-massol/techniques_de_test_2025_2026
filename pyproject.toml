@@ -8,3 +8,12 @@ select = [
     "SIM",
     "I",
 ]
+
+ignore = [
+    "D203",
+    "D213"
+]
+
+# Configuration for coverage (don't test tests files)
+[tool.coverage.run]
+source = ["src/app"]
