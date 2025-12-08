@@ -22,15 +22,15 @@ Knowing that the `PointSet` class is made so that the 4 first bytes of its binar
 
 **API tests:**
 
-- [ ] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a correct Triangle structure in binary format for a given `PointSet` ID (response code is 200).
+- [x] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a correct Triangle structure in binary format for a given `PointSet` ID (response code is 200).
 
-- [ ] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a 400 error for an invalid `PointSet` ID format.
+- [x] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a 400 error for an invalid `PointSet` ID format.
 
-- [ ] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a 404 error for an unknown `PointSet` ID.
+- [x] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a 404 error for an unknown `PointSet` ID.
 
-- [ ] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a 400 error for an invalid `PointSet` ID format.
+- [x] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a 400 error for an invalid `PointSet` ID format.
 
-- [ ] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a 503 error when the triangulation service is unavailable.
+- [x] Test the `Triangulator` API to ensure the `/triangulation/{pointSetId}` endpoint returns a 503 error when the triangulation service is unavailable.
 
 
 **Advanced cases:**
@@ -43,8 +43,8 @@ Knowing that the `PointSet` class is made so that the 4 first bytes of its binar
 
 - [x] Test the `Triangulator` class with two conflicting points (same coordinates) and ensure it handles duplicates correctly.
 
-- [ ] Test the `Triangulator` class with various parameter types and values (e.g., passing `None`, strings, negative numbers, etc.) to ensure proper error handling.
+- [x] Test the `Triangulator` class with various parameter types and values (e.g., passing `None`, strings, negative numbers, etc.) to ensure proper error handling.
 
 ## Performance Tests
 
-- [ ] Test the `Triangulator` class with a large number of points (e.g., 1000 points) to evaluate performance and ensure it completes within a reasonable time frame. It will potentially retrieves the time taken for triangulation and checks if it is below a certain threshold (e.g., 1 second).
+- [x] Test the `Triangulator` class with a large number of points (e.g., 1000 points) to evaluate performance and ensure it completes within a reasonable time frame. It will potentially retrieves the time taken for triangulation and checks if it is below a certain threshold (e.g., 1 second).
