@@ -25,7 +25,7 @@ class TestTriangulator:
         for p in points:
             ps.add_point(p)
         tri = Triangulator(ps)
-        assert tri.point_set.get_points() == expected_count
+        assert len(tri.point_set.get_points()) == expected_count
 
     def test_below_minimum_points(self):
         """Test triangulation with less than 3 points."""
@@ -41,7 +41,7 @@ class TestTriangulator:
         """Test triangulation with an empty PointSet."""
         ps = PointSet()
         tri = Triangulator(ps)
-        assert tri.point_set.get_points() == 0
+        assert len(tri.point_set.get_points()) == 0
 
     def test_correct_triangulation(self):
         """Test triangulation with a valid set of points."""
@@ -79,7 +79,7 @@ class TestTriangulator:
         ps = PointSet()
         ps.add_point(Point(-1.0, -2.0))
         tri = Triangulator(ps)
-        assert tri.point_set.get_points() == 1
+        assert len(tri.point_set.get_points()) == 1
 
 
 class TestPointSet:
@@ -105,8 +105,7 @@ class TestPointSet:
         """Test the creation of a PointSet from its binary representation."""
         # 2 points, (1.0,2.0), (3.0,4.0)
         data = struct.pack('<Iff', 2, 1.0, 2.0) + struct.pack('<ff', 3.0, 4.0)
-        ps = PointSet()
-        ps.from_bytes(data)
+        ps = PointSet.from_bytes(data)
         pts = ps.get_points()
         assert len(pts) == 2
         assert pts[0].x == 1.0 and pts[0].y == 2.0

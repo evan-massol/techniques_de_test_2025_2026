@@ -1,13 +1,16 @@
 """Performance tests for the Triangulator."""
-import pytest
 import random
+
+import pytest
+
 from app.pointset import Point, PointSet
 from app.triangulator import Triangulator
+
 
 def generate_random_points(num_points):
     """Generate a list of random 2D points."""
     for _ in range(num_points):
-        yield Point(random.randint(0, 10000), random.randint(0, 10000))
+        yield Point(random.randint(0, 10000000), random.randint(0, 10000000))
 
 
 class TestPerformanceTriangulator:
@@ -16,7 +19,7 @@ class TestPerformanceTriangulator:
     @pytest.mark.parametrize("size", [3, 10, 100, 500, 1000, 10000, 100000, 1000000])
     def test_large_pointset_triangulation(self, size):
         """Tests triangulation performance with a large PointSet."""
-        points = PointSet(generate_random_points(size))
+        points = PointSet(list(generate_random_points(size)))
         tri = Triangulator(points)
         
         import time
